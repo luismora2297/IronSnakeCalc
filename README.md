@@ -1,7 +1,7 @@
 # IronSnakeCalc
 A numerical methods calculator fully written in Python and some modules for it.
 
-##Details :goberserk:
+## Details :goberserk:
 
 This application has two ways to be installed, as a **GUI** program, or as a **Web Application**.
 
