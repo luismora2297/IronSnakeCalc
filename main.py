@@ -8,6 +8,7 @@
 # Begin Imports
 import sys
 import numpy
+import math
 
 # Begin App
 IronCalcLagrangeInterpolate = True
@@ -77,15 +78,15 @@ while IronCalcLagrangeInterpolate:
     for number1, number2 in zip(lg, fx):
         rowprint = str(z) + "   "+str(number1)+"  "+str(number2)
         z += 1
-        print ( rowprint )
+        print(rowprint)
 
     # Aplicando la formula de Lagrange
     U = fx
     T = lg
-    p = 0
+    equation = 0
     for j in range(len(lg)):
         # print(U[j])
-        pt = U[j]
+        equation_t = U[j]
         for k in range(len(lg)):
             if k == j:
                 continue
@@ -93,12 +94,20 @@ while IronCalcLagrangeInterpolate:
             # print(fac)
             polynomium = numpy.poly1d([1.0, -T[k]])
             # print(polynomium)
-            pt *= polynomium / fac
-            # print(pt)
-        p += pt
-        # print(p)
-    print(p)
+            equation_t *= polynomium / fac
+            # print(equation_t)
+        equation += equation_t
+        # print(equation)
+    print(equation)
 
+    lagrangeString = str(equation)
+
+    ironSnakeLagrangeEval = lagrangeString.replace('x', '*('+xenter+')')
+    print(ironSnakeLagrangeEval)
+    lagrangeResult = eval(ironSnakeLagrangeEval)
+    # Imprime el resultado final de LaGrange
+    print(lagrangeResult)
+    # Fin del programa
     IronCalcLagrangeInterpolate = False
 # Sale del programa
 sys.exit(0)
