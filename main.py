@@ -8,7 +8,6 @@
 # Begin Imports
 import sys
 import numpy
-import math
 
 # Begin App
 IronCalcLagrangeInterpolate = True
@@ -48,13 +47,12 @@ while IronCalcLagrangeInterpolate:
     x = 1
     for x in range(i):
         while x < i:
-            xyu = input("Introduzca el número independiente: ")
             try:
-                x = float(xyu)
+                x = float(input("Introduzca el número Independiente: "))
                 lg.append(x)
                 x += 1
             except ValueError:
-                print("Número incorrecto, introduzca denuevo el número")
+                print("Número incorrecto, introduzca denuevo número")
     # Impresión para verificación
     # print(len(lg))
     # print(*lg)
@@ -100,13 +98,9 @@ while IronCalcLagrangeInterpolate:
         # print(equation)
     print(equation)
 
-    lagrangeString = str(equation)
+    ironSnakeLagrangeEval = numpy.polyval(equation,  eval(xenter))
 
-    ironSnakeLagrangeEval = lagrangeString.replace('x', '*('+xenter+')')
     print(ironSnakeLagrangeEval)
-    lagrangeResult = eval(ironSnakeLagrangeEval)
-    # Imprime el resultado final de LaGrange
-    print(lagrangeResult)
     # Fin del programa
     IronCalcLagrangeInterpolate = False
 # Sale del programa
