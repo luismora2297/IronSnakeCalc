@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>IronSnakeCalc</title>
+        <meta name="owner" content="BlackBohr">
+        <meta name="og:title" content="IronSnakeCalc"/>
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta content="yes" name="apple-touch-fullscreen"/>
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="viewport" content="width = 320, initial-scale = 2.3, user-scalable = no">
+        <link href="static/css/main.css" rel="stylesheet">
+    </head>
+    <body>
+
+        <div id="loader-wrapper">
+			<div id="loader"></div>
+			<div class="loader-section section-left"></div>
+			<div class="loader-section section-right"></div>
+		</div>
+        <header class="masthead container-fluid">
+          <div class="container h-100">
+            <div class="row h-100">
+              <div class="col-lg-7 my-auto">
+                <div class="header-content mx-auto">
+                  <h1 class="mb-5">New Age is an app landing page that will help you beautifully showcase your new mobile app, or anything else!</h1>
+                  <a href="#download" class="btn btn-outline btn-xl js-scroll-trigger">Start Now for Free!</a>
+                </div>
+              </div>
+              <div class="col-lg-5 my-auto">
+                <div class="device-container">
+                  <div class="device-mockup iphone6_plus portrait white">
+                    <div class="device">
+                      <div class="screen">
+                        <!-- Demo image for screen mockup, you can put an image here, some HTML, an animation, video, or anything else! -->
+                        <img src="img/demo-screen-1.jpg" class="img-fluid" alt="">
+                      </div>
+                      <div class="button">
+                        <!-- You can hook the "home button" to some JavaScript events or just remove it -->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </header>
+
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top" id="mainNavigation">
+          <a class="navbar-brand" href="#">Logo</a>
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+              <a href="#menu-toggle" class="btn btn-secondary" id="menu-toggle">Toggle Menu</a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="container-fluid">
+            <br>
+
+            <div id="wrapper">
+                <!-- Sidebar -->
+                <div id="sidebar-wrapper">
+                    <ul class="sidebar-nav">
+                        <li class="sidebar-brand">
+                            <a href="#">
+                                Start Bootstrap
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">Dashboard</a>
+                        </li>
+                        <li>
+                            <a href="#">Shortcuts</a>
+                        </li>
+                        <li>
+                            <a href="#">Overview</a>
+                        </li>
+                        <li>
+                            <a href="#">Events</a>
+                        </li>
+                        <li>
+                            <a href="#">About</a>
+                        </li>
+                        <li>
+                            <a href="#">Services</a>
+                        </li>
+                        <li>
+                            <a href="#">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /#sidebar-wrapper -->
+
+                <!-- Page Content -->
+                <div id="page-content-wrapper">
+                    <div class="container-fluid">
+                        <h1>Simple Sidebar</h1>
+                        <p>This template has a responsive menu toggling system. The menu will appear collapsed on smaller screens, and will appear non-collapsed on larger screens. When toggled using the button below, the menu will appear/disappear. On small screens, the page content will be pushed off canvas.</p>
+                        <p>Make sure to keep all page content within the <code>#page-content-wrapper</code>.</p>
+                    </div>
+                </div>
+                <!-- /#page-content-wrapper -->
+
+            </div>
+            <!-- Wrapper End -->
+
+            <form>
+                <table class="table">
+                    <thead class="thead-inverse">
+                        <tr>
+                            <th colspan="6">Calculadora</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td colspan="6">
+                                <input type="text" id="demo">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="button" id="myBtn01" onclick="IronSnakeCalcBtn(this)" value="1">
+                            </td>
+                            <td>
+                                <input type="button" id="myBtn02" onclick="IronSnakeCalcBtn(this)" value="2">
+                            </td>
+                            <td>
+                                <input type="button" id="myBtn03" onclick="IronSnakeCalcBtn(this)" value="3">
+                            </td>
+                            <td>
+                                <input type="button" id="myBtn04" onclick="IronSnakeCalcBtn(this)" value="%">
+                            </td>
+                            <td>
+
+                            </td>
+                            <td>
+
+                            </td>
+                        </tr><tr>
+                            <td>
+                                <input type="button" id="myBtn07" onclick="IronSnakeCalcBtn(this)" value="4">
+                            </td>
+                            <td>
+                                <input type="button" id="myBtn08" onclick="IronSnakeCalcBtn(this)" value="5">
+                            </td>
+                            <td>
+                                <input type="button" id="myBtn09" onclick="IronSnakeCalcBtn(this)" value="6">
+                            </td>
+                            <td>
+                                <input type="button" id="myBtn10" onclick="IronSnakeCalcBtn(this)" value="*">
+                            </td>
+                            <td>
+
+                            </td>
+                            <td>
+
+                            </td>
+                        </tr><tr>
+                            <td>
+                                <input type="button" id="myBtn13" onclick="IronSnakeCalcBtn(this)" value="7">
+                            </td>
+                            <td>
+                                <input type="button" id="myBtn14" onclick="IronSnakeCalcBtn(this)" value="8">
+                            </td>
+                            <td>
+                                <input type="button" id="myBtn15" onclick="IronSnakeCalcBtn(this)" value="9">
+                            </td>
+                            <td>
+                                <input type="button" id="myBtn16" onclick="IronSnakeCalcBtn(this)" value="+">
+                            </td>
+                            <td>
+
+                            </td>
+                            <td>
+
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </form>
+
+            <p>Some example text. Some example text. Some example text. Some example text. Some example text.</p>
+            <p>Some example text. Some example text. Some example text. Some example text. Some example text.</p>
+            <p>Some example text. Some example text. Some example text. Some example text. Some example text.</p>
+        </div>
+    <!-- End Of HTML -->
+    </body>
+    <script src="static/javascript/jquery.min.js"></script>
+    <script src="static/javascript/popper.js"></script>
+    <script src="static/javascript/bootstrap.min.js"></script>
+    <script src="static/javascript/main.js"></script>
+</html>
