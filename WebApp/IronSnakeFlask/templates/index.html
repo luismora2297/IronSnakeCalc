@@ -11,183 +11,275 @@
         <meta name="apple-mobile-web-app-status-bar-style" content="black">
         <meta name="viewport" content="width = 320, initial-scale = 2.3, user-scalable = no">
         <link href="static/css/main.css" rel="stylesheet">
+        <!-- Favicons -->
+        <link rel="apple-touch-icon" sizes="180x180" href="static/css/favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="static/css/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="static/css/favicon/favicon-16x16.png">
+        <link rel="manifest" href="static/css/favicon/manifest.json">
+        <link rel="mask-icon" href="static/css/favicon/safari-pinned-tab.svg" color="#ff3200">
+        <meta name="apple-mobile-web-app-title" content="IronSnakeCalc">
+        <meta name="application-name" content="IronSnakeCalc">
+        <meta name="msapplication-TileColor" content="#ff3200">
+        <meta name="msapplication-TileImage" content="static/css/favicon/mstile-144x144.png">
+        <meta name="theme-color" content="#1e1e1e">
     </head>
     <body>
-
+        <!-- Loader -->
         <div id="loader-wrapper">
 			<div id="loader"></div>
 			<div class="loader-section section-left"></div>
 			<div class="loader-section section-right"></div>
 		</div>
-        <header class="masthead container-fluid">
-          <div class="container h-100">
-            <div class="row h-100">
-              <div class="col-lg-7 my-auto">
-                <div class="header-content mx-auto">
-                  <h1 class="mb-5">New Age is an app landing page that will help you beautifully showcase your new mobile app, or anything else!</h1>
-                  <a href="#download" class="btn btn-outline btn-xl js-scroll-trigger">Start Now for Free!</a>
-                </div>
-              </div>
-              <div class="col-lg-5 my-auto">
-                <div class="device-container">
-                  <div class="device-mockup iphone6_plus portrait white">
-                    <div class="device">
-                      <div class="screen">
-                        <!-- Demo image for screen mockup, you can put an image here, some HTML, an animation, video, or anything else! -->
-                        <img src="img/demo-screen-1.jpg" class="img-fluid" alt="">
+
+        <!-- Begin Wrapper -->
+        <div id="wrapper">
+			<!-- Sidebar -->
+			<div id="sidebar-wrapper">
+				<ul class="sidebar-nav">
+                    <hr>
+					<li class="sidebar-brand">
+						<a href="javascript:;">
+                            <h3>Menú de Selección</h3>
+						</a>
+					</li>
+                    <hr>
+					<li>
+						<a href="#">Calculadora Algebraica</a>
+					</li>
+					<li>
+						<a href="#">Método Lagrange</a>
+					</li>
+					<li>
+						<a href="#">Método de Newton</a>
+					</li>
+					<li>
+						<a href="#">En construcción...</a>
+					</li>
+					<li>
+						<a href="#">Nosotros</a>
+					</li>
+				</ul>
+			</div>
+			<!-- /#sidebar-wrapper -->
+
+			<!-- Page Content -->
+            <div class="row">
+			  <div id="page-content-wrapper" class="container-fluid">
+                <!-- Begin Content -->
+                    <header class="masthead container-fluid">
+                      <div class="container h-100">
+                        <div class="row h-100">
+                          <div class="col-lg-7 my-auto">
+                            <div class="header-content mx-auto">
+                                <h2><strong>Iron Snake Calc</strong></h2>
+                            </div>
+                          </div>
+                        </div>
                       </div>
-                      <div class="button">
-                        <!-- You can hook the "home button" to some JavaScript events or just remove it -->
+                    </header>
+                    <!-- Navigation bar -->
+                    <nav class="navbar navbar-expand-sm navbar-dark sticky-top" id="ironNavigation" name="ironNavigation" role="navigation">
+                      <a class="navbar-brand" href="#"><img src="static/css/img/IronSnakeCalc-BlackBohr.svg" alt="logo" id="ironLogo"></a>
+                      <div class="collapse navbar-collapse">
+                        <ul class="navbar-nav mr-auto">
+                          <li class="nav-item">
+                              <a class="nav-link" href="#"><i class="fa fa-home ironIconMenu"></i></a>
+                            </li>
+                          <li class="nav-item">
+                              <a class="nav-link" href="#"><i class="fa fa-gears ironIconMenu"></i></a>
+                            </li>
+                          <li class="nav-item">
+                              <a class="nav-link" href="#"><i class="fa fa-list ironIconMenu"></i></a>
+                          </li>
+                        </ul>
+                        <a href="#menu-toggle" class="btn btn-iron" id="menu-toggle"><i class="icon-menu ironIcon"></i></a>
                       </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </header>
-
-        <nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top" id="mainNavigation">
-          <a class="navbar-brand" href="#">Logo</a>
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
-            </li>
-            <li class="nav-item">
-              <a href="#menu-toggle" class="btn btn-secondary" id="menu-toggle">Toggle Menu</a>
-            </li>
-          </ul>
-        </nav>
-
-        <div class="container-fluid">
-            <br>
-
-            <div id="wrapper">
-                <!-- Sidebar -->
-                <div id="sidebar-wrapper">
-                    <ul class="sidebar-nav">
-                        <li class="sidebar-brand">
-                            <a href="#">
-                                Start Bootstrap
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">Dashboard</a>
-                        </li>
-                        <li>
-                            <a href="#">Shortcuts</a>
-                        </li>
-                        <li>
-                            <a href="#">Overview</a>
-                        </li>
-                        <li>
-                            <a href="#">Events</a>
-                        </li>
-                        <li>
-                            <a href="#">About</a>
-                        </li>
-                        <li>
-                            <a href="#">Services</a>
-                        </li>
-                        <li>
-                            <a href="#">Contact</a>
-                        </li>
-                    </ul>
-                </div>
-                <!-- /#sidebar-wrapper -->
-
-                <!-- Page Content -->
-                <div id="page-content-wrapper">
+                    </nav>
+                    <!-- Content -->
+                    <hr>
                     <div class="container-fluid">
-                        <h1>Simple Sidebar</h1>
-                        <p>This template has a responsive menu toggling system. The menu will appear collapsed on smaller screens, and will appear non-collapsed on larger screens. When toggled using the button below, the menu will appear/disappear. On small screens, the page content will be pushed off canvas.</p>
-                        <p>Make sure to keep all page content within the <code>#page-content-wrapper</code>.</p>
+                        <div class="row">
+                            <div class="col-md-8 offset-md-2">
+                                <div class="col align-self-center form-group">
+                                    <!-- Begin Calculator -->
+                                    <form id="ironAlgebraCalculator" class="ironFormCalculator" method="POST">
+                                        <table class="table">
+                                            <thead class="thead-inverse">
+                                                <tr>
+                                                    <th colspan="6">
+                                                        <span style="float:left;">
+                                                            Calculadora
+                                                        </span>
+                                                        <span style="float: right;">
+                                                            <a id="ironMin01" href="#"><i class="fa fa-circle ironMin"></i></a>
+                                                            &nbsp;<a id="ironHide01" href="#"><i class="fa fa-circle ironHide"></i></a>
+                                                            &nbsp;<a id="ironClose01" href="#"><i class="fa fa-circle ironClose"></i></a>
+                                                        </span>
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td colspan="6">
+                                                        <input type="text" class="form-control ironInput" name="ironShow" id="ironShow" placeholder="Introduzca valores manualmente o con la calculadora">
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <button type="button" class="btn btn-block ironCalculator" value="1"><strong>1</strong></button>
+                                                    </td>
+                                                    <td>
+                                                        <button type="button" class="btn btn-block ironCalculator" value="2"><strong>2</strong></button>
+                                                    </td>
+                                                    <td>
+                                                        <button type="button" class="btn btn-block ironCalculator" value="3"><strong>3</strong></button>
+                                                    </td>
+                                                    <td>
+                                                        <button type="button" class="btn btn-block ironCalculator" value="/"><strong>/</strong></button>
+                                                    </td>
+                                                    <td>
+                                                        <button type="button" class="btn btn-block" id="ironCalculatorReset"><i class="fa fa-undo"></i></button>
+                                                    </td>
+                                                    <td>
+                                                        <button type="button" class="btn btn-block" id="ironCalculatorDelete"><i class="fa fa-arrow-circle-left"></i></button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <button type="button" class="btn btn-block ironCalculator" value="4"><strong>4</strong></button>
+                                                    </td>
+                                                    <td>
+                                                        <button type="button" class="btn btn-block ironCalculator" value="5"><strong>5</strong></button>
+                                                    </td>
+                                                    <td>
+                                                        <button type="button" class="btn btn-block ironCalculator" value="6"><strong>6</strong></button>
+                                                    </td>
+                                                    <td>
+                                                        <button type="button" class="btn btn-block ironCalculator" value="*"><i class="fa fa-times"></i></button>
+                                                    </td>
+                                                    <td>
+
+                                                    </td>
+                                                    <td>
+
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <button type="button" class="btn btn-block ironCalculator" value="7"><strong>7</strong></button>
+                                                    </td>
+                                                    <td>
+                                                        <button type="button" class="btn btn-block ironCalculator" value="8"><strong>8</strong></button>
+                                                    </td>
+                                                    <td>
+                                                        <button type="button" class="btn btn-block ironCalculator" value="9"><strong>9</strong></button>
+                                                    </td>
+                                                    <td>
+                                                        <button type="button" class="btn btn-block ironCalculator" value="-"><i class="fa fa-minus"></i></button>
+                                                    </td>
+                                                    <td>
+
+                                                    </td>
+                                                    <td>
+
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <button type="button" class="btn btn-block ironCalculator" value="0"><strong>0</strong></button>
+                                                    </td>
+                                                    <td>
+                                                        <button type="button" class="btn btn-block ironCalculator" value="."><strong>.</strong></button>
+                                                    </td>
+                                                    <td>
+                                                        <button type="button" class="btn btn-block ironCalculator" value="%"><i class="fa fa-percent"></i></button>
+                                                    </td>
+                                                    <td>
+                                                        <button type="button" class="btn btn-block ironCalculator" value="+"><i class="fa fa-plus"></i></button>
+                                                    </td>
+                                                    <td>
+
+                                                    </td>
+                                                    <td>
+
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </form>
+                                    <!-- End Calculator -->
+                                </div>
+                                <div class="col align-self-center form-group">
+                                    <!-- Begin Lagrange -->
+                                    <form id="ironLagrangeCalculator" class="ironFormCalculator" method="POST">
+                                        <table class="table">
+                                            <thead class="thead-inverse">
+                                                <tr>
+                                                    <th colspan="6">
+                                                        <span style="float:left;">
+                                                            Método Lagrange
+                                                        </span>
+                                                        <span style="float: right;">
+                                                            <a id="ironMin02" href="#"><i class="fa fa-circle ironMin"></i></a>
+                                                            &nbsp;<a id="ironHide02" href="#"><i class="fa fa-circle ironHide"></i></a>
+                                                            &nbsp;<a id="ironClose02" href="#"><i class="fa fa-circle ironClose"></i></a>
+                                                        </span>
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <p>En esta sección, se aplicará Lagrange para calcular la interpolación de una cantidad <strong>n</strong> de números.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </form>
+                                    <!-- End Lagrange -->
+                                </div>
+                                <div class="col align-self-center form-group">
+                                    <!-- Begin Newton -->
+                                    <form id="ironNewtonCalculator" class="ironFormCalculator" method="POST">
+                                        <table class="table">
+                                            <thead class="thead-inverse">
+                                                <tr>
+                                                    <th colspan="6">
+                                                        <span style="float:left;">
+                                                            Método Newton
+                                                        </span>
+                                                        <span style="float: right;">
+                                                            <a id="ironMin03" href="#"><i class="fa fa-circle ironMin"></i></a>
+                                                            &nbsp;<a id="ironHide03" href="#"><i class="fa fa-circle ironHide"></i></a>
+                                                            &nbsp;<a id="ironClose03" href="#"><i class="fa fa-circle ironClose"></i></a>
+                                                        </span>
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </form>
+                                    <!-- End Newton -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <!-- /#page-content-wrapper -->
-
+			  </div>
             </div>
-            <!-- Wrapper End -->
+			<!-- /#page-content-wrapper -->
+		</div>
+        <!-- Wrapper End -->
 
-            <form>
-                <table class="table">
-                    <thead class="thead-inverse">
-                        <tr>
-                            <th colspan="6">Calculadora</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td colspan="6">
-                                <input type="text" id="demo">
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <input type="button" id="myBtn01" onclick="IronSnakeCalcBtn(this)" value="1">
-                            </td>
-                            <td>
-                                <input type="button" id="myBtn02" onclick="IronSnakeCalcBtn(this)" value="2">
-                            </td>
-                            <td>
-                                <input type="button" id="myBtn03" onclick="IronSnakeCalcBtn(this)" value="3">
-                            </td>
-                            <td>
-                                <input type="button" id="myBtn04" onclick="IronSnakeCalcBtn(this)" value="%">
-                            </td>
-                            <td>
-
-                            </td>
-                            <td>
-
-                            </td>
-                        </tr><tr>
-                            <td>
-                                <input type="button" id="myBtn07" onclick="IronSnakeCalcBtn(this)" value="4">
-                            </td>
-                            <td>
-                                <input type="button" id="myBtn08" onclick="IronSnakeCalcBtn(this)" value="5">
-                            </td>
-                            <td>
-                                <input type="button" id="myBtn09" onclick="IronSnakeCalcBtn(this)" value="6">
-                            </td>
-                            <td>
-                                <input type="button" id="myBtn10" onclick="IronSnakeCalcBtn(this)" value="*">
-                            </td>
-                            <td>
-
-                            </td>
-                            <td>
-
-                            </td>
-                        </tr><tr>
-                            <td>
-                                <input type="button" id="myBtn13" onclick="IronSnakeCalcBtn(this)" value="7">
-                            </td>
-                            <td>
-                                <input type="button" id="myBtn14" onclick="IronSnakeCalcBtn(this)" value="8">
-                            </td>
-                            <td>
-                                <input type="button" id="myBtn15" onclick="IronSnakeCalcBtn(this)" value="9">
-                            </td>
-                            <td>
-                                <input type="button" id="myBtn16" onclick="IronSnakeCalcBtn(this)" value="+">
-                            </td>
-                            <td>
-
-                            </td>
-                            <td>
-
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </form>
-
-            <p>Some example text. Some example text. Some example text. Some example text. Some example text.</p>
-            <p>Some example text. Some example text. Some example text. Some example text. Some example text.</p>
-            <p>Some example text. Some example text. Some example text. Some example text. Some example text.</p>
-        </div>
     <!-- End Of HTML -->
     </body>
     <script src="static/javascript/jquery.min.js"></script>

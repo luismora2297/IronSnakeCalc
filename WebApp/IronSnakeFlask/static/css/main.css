@@ -1,10 +1,9 @@
-@import url("bootstrap.min.css");
-@import url("bootstrap-grid.min.css");
-@import url("bootstrap-reboot.min.css");
+@import url("bootstrap.css");
+@import url("bootstrap-grid.css");
+@import url("bootstrap-reboot.css");
 @import url("font-awesome.min.css");
 @import url("simple-line-icons.css");
 @import url("animate.css");
-@import url("new-age.css");
 
 /* Thead Styles */
 
@@ -12,6 +11,118 @@
 {
   color: #fff;
   background-color: #292b2c;
+}
+
+.ironInput
+{
+	width:100%;
+	background-color:#FFD4CA;
+	border-width: 0 0 2px 0;
+	border-color: #1E1E1E;
+	font-size: 1.2em;
+	margin-top: 10px;
+	padding: 15px 0 15px 0;
+}
+
+.ironIcon
+{
+	font-size: 1.5em;
+}
+
+.ironIconMenu
+{
+	font-size: 3em;
+	margin-left: 3px;
+}
+
+.btn-iron
+{
+  color: #fff;
+  background-color: #FF4D1C;
+  border-color: #222222;
+  width: 50px;
+  height: 50px;
+  padding: 12px 5px 5px 5px;
+}
+
+.btn-iron:hover {
+  color: #fff;
+  background-color: #FF421D;
+  border-color: #F94319;
+}
+
+.btn-iron:focus, .btn-iron.focus
+{
+  box-shadow: 0 0 0 0.2rem rgba(255, 67, 41, 0.5);
+}
+
+.btn-iron.disabled, .btn-iron:disabled {
+  background-color: #FF652A;
+  border-color: #EA642C;
+}
+
+.btn-iron:not([disabled]):not(.disabled):active, .btn-iron:not([disabled]):not(.disabled).active,
+.show > .btn-iron.dropdown-toggle
+{
+  color: #fff;
+  background-color: #FF4F21;
+  border-color: #FF4329;
+  box-shadow: 0 0 0 0.2rem rgba(255, 67, 41, 0.5);
+}
+
+#ironNavigation
+{
+	background-color: #1E1E1E;
+}
+
+#ironLogo
+{
+	width:5.2rem;
+}
+
+.ironFormCalculator
+{
+	border-width: 0 2px 2px 2px;
+	border-color: #1E1E1E;
+	padding: 0 0 15px 0;
+	box-shadow: 0 0.2rem 0.2rem 0.2rem rgba(5, 5, 5, 0.5);
+	background-color: #E7E7E7;
+}
+
+.ironHide
+{
+	color: #FFF429;
+}
+
+.ironMin
+{
+	color: #02CC00;
+}
+
+.ironClose
+{
+	color: #E51000;
+}
+
+@keyframes ironGazer
+{
+		from { background-position: 0 0; }
+		to { background-position: 100% 0; }
+}
+@-webkit-keyframes ironGazer
+{
+		from { background-position: 0 0; }
+		to { background-position: 100% 0; }
+}
+@-ms-keyframes ironGazer
+{
+		from { background-position: 0 0; }
+		to { background-position: 100% 0; }
+}
+@-moz-keyframes ironGazer
+{
+		from { background-position: 0 0; }
+		to { background-position: 100% 0; }
 }
 
 @keyframes spin
@@ -75,33 +186,15 @@
 	}
 }
 
-.lshErrorHighlighted
-{
-	color:#f90303;
-	background:linear-gradient(135deg,#f90303,#f98603,#d6af03);
-	-webkit-background-clip:text;-webkit-text-fill-color:transparent;
-	font-weight: bold;
-}
-
-.lshTextAlignRight
-{
-	margin-top: 15px;
-	text-align:center;
-}
-
-.lshTextAlignJustify
-{
-	text-align:justify;
-}
-
 
 /* =================================
  ======== Loader ===================
  ===================================*/
 
-.chromeframe {
+.chromeframe
+{
     margin: 0.2em 0;
-    background: #ccc;
+    background: #292b2c;
     color: #000;
     padding: 0.2em 0;
 }
@@ -126,7 +219,7 @@
     margin: -75px 0 0 -75px;
     border-radius: 50%;
     border: 3px solid transparent;
-    border-top-color: #0C485B;
+    border-top-color: #FF2600;
     -webkit-animation: spin 2s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
     animation: spin 2s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
     z-index: 1001;
@@ -141,7 +234,7 @@
         bottom: 5px;
         border-radius: 50%;
         border: 3px solid transparent;
-        border-top-color: #4A78B8;
+        border-top-color: #FF7100;
         -webkit-animation: spin 3s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
         animation: spin 3s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
     }
@@ -156,7 +249,7 @@
         bottom: 15px;
         border-radius: 50%;
         border: 3px solid transparent;
-        border-top-color: #378AFF;
+        border-top-color: #FF470C;
         -webkit-animation: spin 1.5s linear infinite;
         animation: spin 1.5s linear infinite;
     }
@@ -167,7 +260,7 @@
         top: 0;
         width: 51%;
         height: 100%;
-        background: #FEFEFE;
+        background: #1E1E1E;
         z-index: 1000;
         -webkit-transform: translateX(0);
         -ms-transform: translateX(0);
@@ -184,7 +277,8 @@
         right: 0;
 	}
 
-    .log-body #loader-wrapper .loader-section.section-left {
+    .ironBody #loader-wrapper .loader-section.section-left
+    {
         -webkit-transform: translateX(-100%);
         -ms-transform: translateX(-100%);
         transform: translateX(-100%);
@@ -192,7 +286,8 @@
         transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
     }
 
-    .log-body #loader-wrapper .loader-section.section-right {
+    .ironBody #loader-wrapper .loader-section.section-right
+    {
         -webkit-transform: translateX(100%);
         -ms-transform: translateX(100%);
         transform: translateX(100%);
@@ -200,13 +295,13 @@
         transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
     }
 
-	.log-body #loader
+	.ironBody #loader
 	{
         opacity: 0;
         -webkit-transition: all 0.3s ease-out;
                 transition: all 0.3s ease-out;
     }
-	.log-body #loader-wrapper
+	.ironBody #loader-wrapper
 	{
         visibility: hidden;
         -webkit-transform: translateY(-100%);
@@ -215,42 +310,54 @@
         -webkit-transition: all 0.3s 1s ease-out;
                 transition: all 0.3s 1s ease-out;
     }
-
+	
+	.ironBody
+	{
+		background-color: #616161;
+	}
+	
     /* Si el Navegador no tiene Javascript habilitado */
-    .no-js #loader-wrapper {
+    .no-js #loader-wrapper
+    {
         display: none;
     }
-    .no-js h1 {
+    .no-js h1
+    {
         color: #222222;
     }
 
-    #content {
+    #content
+    {
         margin: 0 auto;
         padding-bottom: 50px;
         width: 80%;
         max-width: 978px;
     }
 
-.ir {
+.ir
+{
     background-color: transparent;
     border: 0;
     overflow: hidden;
     *text-indent: -9999px;
 }
 
-.ir:before {
+.ir:before
+{
     content: "";
     display: block;
     width: 0;
     height: 150%;
 }
 
-.hidden {
+.hidden
+{
     display: none !important;
     visibility: hidden;
 }
 
-.visuallyhidden {
+.visuallyhidden
+{
     border: 0;
     clip: rect(0 0 0 0);
     height: 1px;
@@ -262,7 +369,8 @@
 }
 
 .visuallyhidden.focusable:active,
-.visuallyhidden.focusable:focus {
+.visuallyhidden.focusable:focus
+{
     clip: auto;
     height: auto;
     margin: 0;
@@ -271,22 +379,26 @@
     width: auto;
 }
 
-.invisible {
+.invisible
+{
     visibility: hidden;
 }
 
 
 .clearfix:before,
-.clearfix:after {
+.clearfix:after
+{
     content: " ";
     display: table;
 }
 
-.clearfix:after {
+.clearfix:after
+{
     clear: both;
 }
 
-.clearfix {
+.clearfix
+{
     *zoom: 1;
 }
 
@@ -302,18 +414,18 @@
 
 #wrapper.toggled
 {
-    padding-left: 250px;
+    padding-left: 300px;
 }
 
 #sidebar-wrapper {
     z-index: 1000;
     position: fixed;
-    left: 250px;
+    left: 300px;
     width: 0;
     height: 100%;
-    margin-left: -250px;
+    margin-left: -300px;
     overflow-y: auto;
-    background: #000;
+    background: #1E1E1E;
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
@@ -321,13 +433,12 @@
 }
 
 #wrapper.toggled #sidebar-wrapper {
-    width: 250px;
+    width: 300px;
 }
 
 #page-content-wrapper {
     width: 100%;
     position: absolute;
-    padding: 15px;
 }
 
 #wrapper.toggled #page-content-wrapper {
@@ -341,7 +452,7 @@
 .sidebar-nav {
     position: absolute;
     top: 0;
-    width: 250px;
+    width: 300px;
     margin: 0;
     padding: 0;
     list-style: none;
@@ -384,25 +495,240 @@
     background: none;
 }
 
-@media(min-width:768px) {
+@media(min-width:768px)
+{
     #wrapper {
         padding-left: 0;
     }
-    #wrapper.toggled {
-        padding-left: 250px;
+    #wrapper.toggled
+    {
+        padding-left: 300px;
     }
-    #sidebar-wrapper {
+    #sidebar-wrapper
+    {
         width: 0;
     }
-    #wrapper.toggled #sidebar-wrapper {
-        width: 250px;
+    #wrapper.toggled #sidebar-wrapper
+    {
+        width: 300px;
     }
     #page-content-wrapper {
-        padding: 20px;
         position: relative;
     }
-    #wrapper.toggled #page-content-wrapper {
+    #wrapper.toggled #page-content-wrapper
+    {
         position: relative;
         margin-right: 0;
     }
 }
+
+header.masthead
+{
+  position: relative;
+  width: 100%;
+  color: white;
+  background: url("img/bg-pattern.svg"), #FF3416;
+  background: url("img/bg-pattern.svg"), -webkit-linear-gradient(to left, #FF3416, #222222);
+  background: url("img/bg-pattern.svg"), linear-gradient(to left, #FF3416, #222222);
+   animation: ironGazer 5s linear infinite;
+  -ms-animation: ironGazer 5s linear infinite;
+  -moz-animation: ironGazer 5s linear infinite;
+  -webkit-animation: ironGazer 5s linear infinite;
+}
+header.masthead .header-content
+{
+	max-width: 325px;
+	margin-bottom: 25px;
+	text-align: center;
+}
+header.masthead .header-content h1
+{
+	font-size: 30px;
+}
+
+@media (min-width: 992px)
+{
+	header.masthead
+	{
+	  height: 100px;
+	  min-height: 50px;
+	  padding-top: 0;
+	  padding-bottom: 0;
+	}
+	header.masthead .header-content
+	{
+		margin-bottom: 0;
+		text-align: left;
+	}
+	header.masthead .header-content h1
+	{
+		font-size: 50px;
+	}
+	header.masthead .device-container
+	{
+		max-width: 325px;
+	}
+}
+
+/*Hex Pattern*/
+.hexrow {
+    white-space: nowrap;
+    /*right/left margin set at (( width of child div x sin(30) ) / 2) makes a fairly tight fit; a 3px bottom seems to match*/
+    margin: 0 25px 3px; 
+}
+
+.hexrow > div {
+    width: 100px;
+    height: 173.2px; /* ( width x cos(30) ) x 2 */
+    /* For margin:
+    right/left = ( width x sin(30) ) makes no overlap 
+    right/left = (( width x sin(30) ) / 2) leaves a narrow separation
+    */
+    margin: 0 25px; 
+    position: relative;
+    background-image: url(http://i1166.photobucket.com/albums/q605/Artem_Lebedev/dog-training-collars.jpg);
+    background-position: -50px 0; /* -left position -1 x width x sin(30) */
+    background-repeat: no-repeat;
+    background-size: auto 120%;
+    color: #000000;
+    text-align: center;
+    line-height: 173.2px; /*equals height*/
+    display: inline-block;
+}
+
+.hexrow > div:nth-child(odd) {
+    top: 43.3px; /* ( width x cos(30) / 2 ) */
+}
+
+.hexrow > div:nth-child(even) {
+    top: -44.8px; /* -1 x( ( width x cos(30) / 2) + (hexrow bottom margin / 2)) */ 
+}
+
+.hexrow > div > div:first-of-type {
+    position: absolute;
+    width: 100%;
+    height: 100%; 
+    top: 0;
+    left: 0;
+    z-index: -1;
+    overflow: hidden;
+    background-image: inherit;
+    
+    -ms-transform:rotate(60deg); /* IE 9 */
+    -moz-transform:rotate(60deg); /* Firefox */
+    -webkit-transform:rotate(60deg); /* Safari and Chrome */
+    -o-transform:rotate(60deg); /* Opera */
+    transform:rotate(60deg);
+}
+
+.hexrow > div > div:first-of-type:before {
+    content: '';
+    position: absolute;
+    width: 200px; /* width of main + margin sizing */
+    height: 100%;
+    background-image: inherit;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: auto 120%;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    
+    -ms-transform:rotate(-60deg) translate(-150px, 0); /* IE 9 */
+    -moz-transform:rotate(-60deg) translate(-150px, 0); /* Firefox */
+    -webkit-transform:rotate(-60deg) translate(-150px, 0); /* Safari and Chrome */
+    -o-transform:rotate(-60deg) translate(-150px, 0); /* Opera */
+    transform:rotate(-60deg) translate(-150px, 0);
+    
+    -ms-transform-origin: 0 0; /* IE 9 */
+    -webkit-transform-origin: 0 0; /* Safari and Chrome */
+    -moz-transform-origin: 0 0; /* Firefox */
+    -o-transform-origin: 0 0; /* Opera */
+    transform-origin: 0 0;
+}
+
+.hexrow > div > div:last-of-type {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -2;
+    overflow: hidden;
+    background-image: inherit;
+    
+    -ms-transform:rotate(-60deg); /* IE 9 */
+    -moz-transform:rotate(-60deg); /* Firefox */
+    -webkit-transform:rotate(-60deg); /* Safari and Chrome */
+    -o-transform:rotate(-60deg); /* Opera */
+    transform:rotate(-60deg);
+}
+
+.hexrow > div > div:last-of-type:before {
+    content: '';
+    position: absolute;
+    width: 200px; /* starting width + margin sizing */
+    height: 100%;
+    background-image: inherit;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: auto 120%;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    
+    /*translate properties are initial width (100px) and half height (173.2 / 2 = 86.6) */
+    -ms-transform:rotate(60deg) translate(100px, 86.6px); /* IE 9 */
+    -moz-transform:rotate(60deg) translate(100px, 86.6px); /* Firefox */
+    -webkit-transform:rotate(60deg) translate(100px, 86.6px); /* Safari and Chrome */
+    -o-transform:rotate(60deg) translate(100px, 86.6px); /* Opera */
+    transform:rotate(60deg) translate(100px, 86.6px);
+    
+    -ms-transform-origin: 100% 0; /* IE 9 */
+    -webkit-transform-origin: 100% 0; /* Safari and Chrome */
+    -moz-transform-origin: 100% 0; /* Firefox */
+    -o-transform-origin: 100% 0; /* Opera */
+    transform-origin: 100% 0;
+}
+
+.hexrow > div > span {
+    display: inline-block;
+    margin: 0 -30px;
+    line-height: 1.1;
+    vertical-align: middle;
+    white-space: normal; 
+}
+
+.hexrow:nth-child(2) > div:nth-child(1) {
+    background-image: url(http://i724.photobucket.com/albums/ww244/NBAchikk1995/flowers.jpg);
+}
+
+.hexrow:nth-child(2) > div:nth-child(1) > span {
+    /*change some other settings*/
+    margin: 0 -20px;
+    color: black;
+    font-size: .8em;
+    font-weight: bold;
+}
+
+.hexrow:nth-child(2) > div:nth-child(2) {
+    background-image: url(http://i197.photobucket.com/albums/aa231/sterling_red/landscape.jpg);
+    color: #ffffff;
+}
+
+.hexrow:nth-child(2) > div:nth-child(3) {
+    background-image: url(http://i257.photobucket.com/albums/hh204/h22prld98/2157781306_7a7a8e4cf7.jpg);
+    opacity: .3;
+    color: #ffffff;
+}
+
+.hexrow:nth-child(2) > div:nth-child(3) > div:before {
+    /* nothing special needed here */
+}
+
+.hexrow:nth-child(2) > div:nth-child(4) {
+    background-image: url(http://i916.photobucket.com/albums/ad8/paulak100/Obraz395.jpg);
+    /*you can shift a large background image, but it can get complicated
+    best to keep the image as the total width (200px) and height (174px)
+ 

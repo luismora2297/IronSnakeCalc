@@ -1,22 +1,33 @@
 $(document).ready(function()
 {
-    $('#mainNavigation').attr("hidden", true);
+    $('#ironNavigation').attr("hidden", true);
 	setTimeout(function()
     {
-	    $('body').addClass('log-body');
-	    $('#mainNavigation').attr("hidden", false);
+	    $('body').addClass('ironBody');
+	    $('#ironNavigation').attr("hidden", false);
 	},5000);
 
 });
 
-function IronSnakeCalcBtn(button)
+$('.ironCalculator').click (function()
 {
-    var x = button.value;
-	document.getElementById("demo").innerHTML += x;
-}
+   $('#ironShow').val($('#ironShow').val()+$(this).val());
+});
 
 $("#menu-toggle").click(function(e)
 {
   e.preventDefault();
   $("#wrapper").toggleClass("toggled");
+});
+
+$("#ironCalculatorReset").click(function(e)
+{
+  e.preventDefault();
+  $('#ironShow').val('');
+});
+
+$("#ironCalculatorDelete").click(function(e)
+{
+  e.preventDefault();
+  $('#ironShow').val($("#ironShow").val().substring(0, $("#ironShow").val().length - 1));
 });

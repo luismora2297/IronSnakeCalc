@@ -10,7 +10,9 @@
 
 # Begin Imports 
 import sys 
-import numpy 
+import numpy
+import cmath
+import matplotlib
 
 # Begin App 
 IronCalcLagrangeInterpolate = True 
@@ -21,7 +23,7 @@ while IronCalcLagrangeInterpolate:
         # Petición de cantidad de números a interpolar 
         xyz = input("Introduzca la cantidad de números a interpolar: ")
         try: 
-            i = int(xyz) 
+            i = int(xyz)
             # Confirmando nuestra cantidad de números a interpolar 
             # print(i) 
             # Condición que tiene nuestro metodo 
@@ -47,7 +49,7 @@ while IronCalcLagrangeInterpolate:
     fx = [] 
  
     # Pedimos los números independientes 
-    x = 1 
+    x = 0
     for x in range(i): 
         while x < i: 
             xyu = input("Introduzca el número independiente: ") 
@@ -62,7 +64,7 @@ while IronCalcLagrangeInterpolate:
     # print(*lg) 
  
     # Pedimos los números dependientes 
-    y = 1 
+    y = 0
     for y in range(i): 
         while y < i: 
             try: 
