@@ -1,0 +1,60 @@
+<!-- Render Lagrange Div -->
+<table class="table table-striped table-bordered">
+    <thead class="thead-inverse">
+        <tr>
+            <th colspan="2">
+                <span style="float:left;">
+                    Método Lagrange
+                </span>
+                <span style="float: right;">
+                    <a id="ironMin04" href="javascript:;"><i class="fa fa-circle ironMin"></i></a>
+                    &nbsp;<a id="ironHide04" href="javascript:;"><i class="fa fa-circle ironHide"></i></a>
+                    &nbsp;<a id="ironClose04" href="javascript:;"><i class="fa fa-circle ironClose"></i></a>
+                </span>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td colspan="2">
+                <label>El valor evaluado es:</label>
+                <output class="form-control ironOutput" name="ironOutputLg" id="ironOutputLg">{{ iron_lg_result }}</output>
+                <p>{{ iron_lg_equation }}</p>
+                <p>{{ iron_lg_table }}</p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+
+<div id="ironLgGraphic" class="col-md-12 justify-content-md-center" style="width:100%;height:500px;">
+  <script src="static/javascript/d3.v4.3.0.min.js"></script>
+  <script src="static/javascript/dimple.v2.3.0.min.js"></script>
+  <script type="text/javascript">
+    // Crea la Gráfica
+     var svg = dimple.newSvg("#ironLgGraphic", "100%", "100%");
+
+    //Data de la gráfica
+    data = [
+        {% for item_1, item_2 in iron_graph %}
+            {"f(i)": "{{item_1}}", "f(x)": "{{item_2}}"},
+        {% endfor %}
+
+        {"f(i)":"{{ iron_lg_entered }}", "f(x)":"{{ iron_lg_result }}"},
+        {"f(i)":"{{ iron_lg_entered }}", "f(x)":"{{ iron_lg_result }}"}
+    ];
+    var myChart = new dimple.chart(svg, data);
+    myChart.setBounds(80, 30, 505, 305);
+    var x = myChart.addCategoryAxis("x", "f(i)");
+    var y = myChart.addMeasureAxis("y", "f(x)");
+    //var y1 = myChart.addMeasureAxis("y", "g(x)");
+    var s = myChart.addSeries("Interpolacion", dimple.plot.line);
+    // var s1 = myChart.addSeries("Valor Interpolacion", dimple.plot.bubble, [x,y1]);
+    // Asignando los colores en los label
+    myChart.assignColor("Interpolacion", "#FF4D1C");
+    // myChart.assignColor("Valor Interpolacion", "white", "red", 0.5);
+    s.lineWeight = 5;
+    s.lineMarkers = true;
+    myChart.draw();
+  </script>
+</div>

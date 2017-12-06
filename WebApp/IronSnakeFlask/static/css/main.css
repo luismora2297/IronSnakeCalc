@@ -13,6 +13,23 @@
   background-color: #292b2c;
 }
 
+.bg-primary-iron
+{
+  background-color: #FF4D1C !important;
+}
+
+.ironOutput
+{
+	width:100%;
+	background-color:#FFD4CA;
+	border-width: 2px 0 0 0;
+	border-color: #1E1E1E;
+	font-size: 1.2em;
+	margin-top: 10px;
+	padding: 15px 0 15px 0;
+	text-align:right;
+}
+
 .ironInput
 {
 	width:100%;
@@ -20,8 +37,22 @@
 	border-width: 0 0 2px 0;
 	border-color: #1E1E1E;
 	font-size: 1.2em;
-	margin-top: 10px;
 	padding: 15px 0 15px 0;
+	text-align:right;
+}
+
+.ironInput:focus
+{
+	background-color:#FFD4CA;
+	border-width: 0 0 2px 0;
+	border-color: #757575;
+}
+
+.ironInput:checked
+{
+	background-color:#FFD4CA;
+	border-width: 0 0 2px 0;
+	border-color: #757575;
 }
 
 .ironIcon
@@ -33,6 +64,12 @@
 {
 	font-size: 3em;
 	margin-left: 3px;
+}
+
+#menu-toggle_2
+{
+  color: #fff;
+  background-color: #FF4D1C;
 }
 
 .btn-iron
@@ -85,7 +122,23 @@
 	border-width: 0 2px 2px 2px;
 	border-color: #1E1E1E;
 	padding: 0 0 15px 0;
-	box-shadow: 0 0.2rem 0.2rem 0.2rem rgba(5, 5, 5, 0.5);
+	box-shadow: 0.7rem 0.7rem 0.5rem rgba(5, 5, 5, 0.5);
+	background-color: #E7E7E7;
+}
+
+.ironHeaderLagrange
+{
+	text-align:center;
+	background-color: #FF4D1C;
+	font-weight: bold;
+}
+
+.ironFormAdder
+{
+	border-width: 0 2px 2px 2px;
+	border-color: #1E1E1E;
+	padding: 0 0 15px 0;
+	box-shadow: 0.7rem 0.7rem 0.5rem rgba(5, 5, 5, 0.5);
 	background-color: #E7E7E7;
 }
 
@@ -225,114 +278,115 @@
     z-index: 1001;
 }
 
-    #loader:before {
-        content: "";
-        position: absolute;
-        top: 5px;
-        left: 5px;
-        right: 5px;
-        bottom: 5px;
-        border-radius: 50%;
-        border: 3px solid transparent;
-        border-top-color: #FF7100;
-        -webkit-animation: spin 3s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
-        animation: spin 3s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
-    }
+#loader:before
+{
+	content: "";
+	position: absolute;
+	top: 5px;
+	left: 5px;
+	right: 5px;
+	bottom: 5px;
+	border-radius: 50%;
+	border: 3px solid transparent;
+	border-top-color: #FF7100;
+	-webkit-animation: spin 3s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
+	animation: spin 3s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
+}
 
-	#loader:after
-	{
-        content: "";
-        position: absolute;
-        top: 15px;
-        left: 15px;
-        right: 15px;
-        bottom: 15px;
-        border-radius: 50%;
-        border: 3px solid transparent;
-        border-top-color: #FF470C;
-        -webkit-animation: spin 1.5s linear infinite;
-        animation: spin 1.5s linear infinite;
-    }
+#loader:after
+{
+	content: "";
+	position: absolute;
+	top: 15px;
+	left: 15px;
+	right: 15px;
+	bottom: 15px;
+	border-radius: 50%;
+	border: 3px solid transparent;
+	border-top-color: #FF470C;
+	-webkit-animation: spin 1.5s linear infinite;
+	animation: spin 1.5s linear infinite;
+}
 
-	#loader-wrapper .loader-section
-	{
-        position: fixed;
-        top: 0;
-        width: 51%;
-        height: 100%;
-        background: #1E1E1E;
-        z-index: 1000;
-        -webkit-transform: translateX(0);
-        -ms-transform: translateX(0);
-        transform: translateX(0);
-    }
+#loader-wrapper .loader-section
+{
+	position: fixed;
+	top: 0;
+	width: 51%;
+	height: 100%;
+	background: #1E1E1E;
+	z-index: 1000;
+	-webkit-transform: translateX(0);
+	-ms-transform: translateX(0);
+	transform: translateX(0);
+}
 
-	#loader-wrapper .loader-section.section-left
-	{
-        left: 0;
-    }
+#loader-wrapper .loader-section.section-left
+{
+	left: 0;
+}
 
-	#loader-wrapper .loader-section.section-right
-	{
-        right: 0;
-	}
+#loader-wrapper .loader-section.section-right
+{
+	right: 0;
+}
 
-    .ironBody #loader-wrapper .loader-section.section-left
-    {
-        -webkit-transform: translateX(-100%);
-        -ms-transform: translateX(-100%);
-        transform: translateX(-100%);
-        -webkit-transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
-        transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
-    }
+.ironBody #loader-wrapper .loader-section.section-left
+{
+	-webkit-transform: translateX(-100%);
+	-ms-transform: translateX(-100%);
+	transform: translateX(-100%);
+	-webkit-transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+	transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+}
 
-    .ironBody #loader-wrapper .loader-section.section-right
-    {
-        -webkit-transform: translateX(100%);
-        -ms-transform: translateX(100%);
-        transform: translateX(100%);
-		-webkit-transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
-        transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
-    }
+.ironBody #loader-wrapper .loader-section.section-right
+{
+	-webkit-transform: translateX(100%);
+	-ms-transform: translateX(100%);
+	transform: translateX(100%);
+	-webkit-transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+	transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+}
 
-	.ironBody #loader
-	{
-        opacity: 0;
-        -webkit-transition: all 0.3s ease-out;
-                transition: all 0.3s ease-out;
-    }
-	.ironBody #loader-wrapper
-	{
-        visibility: hidden;
-        -webkit-transform: translateY(-100%);
-            -ms-transform: translateY(-100%);
-                transform: translateY(-100%);
-        -webkit-transition: all 0.3s 1s ease-out;
-                transition: all 0.3s 1s ease-out;
-    }
-	
-	.ironBody
-	{
-		background-color: #616161;
-	}
-	
-    /* Si el Navegador no tiene Javascript habilitado */
-    .no-js #loader-wrapper
-    {
-        display: none;
-    }
-    .no-js h1
-    {
-        color: #222222;
-    }
+.ironBody #loader
+{
+	opacity: 0;
+	-webkit-transition: all 0.3s ease-out;
+			transition: all 0.3s ease-out;
+}
+.ironBody #loader-wrapper
+{
+	visibility: hidden;
+	-webkit-transform: translateY(-100%);
+		-ms-transform: translateY(-100%);
+			transform: translateY(-100%);
+	-webkit-transition: all 0.3s 1s ease-out;
+			transition: all 0.3s 1s ease-out;
+}
 
-    #content
-    {
-        margin: 0 auto;
-        padding-bottom: 50px;
-        width: 80%;
-        max-width: 978px;
-    }
+.ironBody
+{
+	background-color: #616161;
+}
+
+/* Si el Navegador no tiene Javascript habilitado */
+.no-js #loader-wrapper
+{
+	display: none;
+}
+.no-js h1
+{
+	color: #222222;
+}
+
+#content
+{
+	margin: 0 auto;
+	padding-bottom: 50px;
+	width: 80%;
+	max-width: 978px;
+}
 
 .ir
 {
@@ -434,6 +488,7 @@
 
 #wrapper.toggled #sidebar-wrapper {
     width: 300px;
+    box-shadow: 5px 10px 18px #FF4D1C;
 }
 
 #page-content-wrapper {
@@ -476,8 +531,12 @@
 }
 
 .sidebar-nav li a:active,
-.sidebar-nav li a:focus {
+.sidebar-nav li a:focus
+{
     text-decoration: none;
+    background: rgba(255, 255, 255, 0.2);
+    color: #FF4D1C;
+    border: none;
 }
 
 .sidebar-nav > .sidebar-brand {
@@ -511,6 +570,7 @@
     #wrapper.toggled #sidebar-wrapper
     {
         width: 300px;
+        box-shadow: 5px 10px 18px #FF4D1C;
     }
     #page-content-wrapper {
         position: relative;

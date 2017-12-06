@@ -1,0 +1,28 @@
+<!-- Render Table Rows -->
+<tr>
+    <th colspan="2" class="bg-primary-iron">
+       Ponga los Puntos a evaluar
+     </th>
+</tr>
+<tr class="ironHeaderLagrange">
+    <th>
+        X
+    </th>
+    <th>
+        F(x)
+    </th>
+</tr>
+<tr>
+    <td colspan="2"><input type="text" class="form-control ironInput" name="iron_xenter" placeholder="Introduzca Valor de Interpolación"></td>
+</tr>
+{% for addrow in range(ironaddrows) %}
+<tr class="animated fadeIn">
+    <td><input type="text" class="form-control ironInput" name="iron_lg_x[]" placeholder="Introduzca Valor"></td>
+    <td><input type="text" class="form-control ironInput" name="iron_lg_fx[]" placeholder="Introduzca Valor"></td>
+</tr>
+{% endfor %}
+<tr>
+    <td colspan="2">
+        <button type="submit" class="btn btn-block btn-primary">Enviar</button>
+    </td>
+</tr>

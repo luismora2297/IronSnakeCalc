@@ -24,44 +24,12 @@
         <meta name="theme-color" content="#1e1e1e">
     </head>
     <body>
-        <!-- Loader -->
-        <div id="loader-wrapper">
-			<div id="loader"></div>
-			<div class="loader-section section-left"></div>
-			<div class="loader-section section-right"></div>
-		</div>
-
+        <!-- Loader is Here! -->
+        {% include 'iron_loader.html' %}
         <!-- Begin Wrapper -->
         <div id="wrapper">
-			<!-- Sidebar -->
-			<div id="sidebar-wrapper">
-				<ul class="sidebar-nav">
-                    <hr>
-					<li class="sidebar-brand">
-						<a href="javascript:;">
-                            <h3>Menú de Selección</h3>
-						</a>
-					</li>
-                    <hr>
-					<li>
-						<a href="#">Calculadora Algebraica</a>
-					</li>
-					<li>
-						<a href="#">Método Lagrange</a>
-					</li>
-					<li>
-						<a href="#">Método de Newton</a>
-					</li>
-					<li>
-						<a href="#">En construcción...</a>
-					</li>
-					<li>
-						<a href="#">Nosotros</a>
-					</li>
-				</ul>
-			</div>
-			<!-- /#sidebar-wrapper -->
-
+            <!-- Wrapper is Here! -->
+            {% include 'iron_wrapper.html' %}
 			<!-- Page Content -->
             <div class="row">
 			  <div id="page-content-wrapper" class="container-fluid">
@@ -79,17 +47,17 @@
                     </header>
                     <!-- Navigation bar -->
                     <nav class="navbar navbar-expand-sm navbar-dark sticky-top" id="ironNavigation" name="ironNavigation" role="navigation">
-                      <a class="navbar-brand" href="#"><img src="static/css/img/IronSnakeCalc-BlackBohr.svg" alt="logo" id="ironLogo"></a>
+                      <a class="navbar-brand" href="javascript:;"><img src="static/css/img/IronSnakeCalc-BlackBohr.svg" alt="logo" id="ironLogo"></a>
                       <div class="collapse navbar-collapse">
                         <ul class="navbar-nav mr-auto">
                           <li class="nav-item">
-                              <a class="nav-link" href="#"><i class="fa fa-home ironIconMenu"></i></a>
+                              <a class="nav-link" href="javascript:;"><i class="fa fa-home ironIconMenu"></i></a>
                             </li>
                           <li class="nav-item">
-                              <a class="nav-link" href="#"><i class="fa fa-gears ironIconMenu"></i></a>
+                              <a class="nav-link" href="javascript:;"><i class="fa fa-gears ironIconMenu"></i></a>
                             </li>
                           <li class="nav-item">
-                              <a class="nav-link" href="#"><i class="fa fa-list ironIconMenu"></i></a>
+                              <a class="nav-link" href="javascript:;"><i class="fa fa-list ironIconMenu"></i></a>
                           </li>
                         </ul>
                         <a href="#menu-toggle" class="btn btn-iron" id="menu-toggle"><i class="icon-menu ironIcon"></i></a>
@@ -102,7 +70,7 @@
                             <div class="col-md-8 offset-md-2">
                                 <div class="col align-self-center form-group">
                                     <!-- Begin Calculator -->
-                                    <form id="ironAlgebraCalculator" class="ironFormCalculator" method="POST">
+                                    <form id="ironAlgebraCalculatorForm" name="ironAlgebraCalculatorForm" class="ironFormCalculator" action="/ironAlgebraCalculator" method="POST" role="form">
                                         <table class="table">
                                             <thead class="thead-inverse">
                                                 <tr>
@@ -121,7 +89,11 @@
                                             <tbody>
                                                 <tr>
                                                     <td colspan="6">
-                                                        <input type="text" class="form-control ironInput" name="ironShow" id="ironShow" placeholder="Introduzca valores manualmente o con la calculadora">
+                                                        <output class="form-control ironOutput" name="ironOutputAlg" id="ironOutputAlg">Resultado... </output>
+                                                    </td>
+                                                </tr><tr>
+                                                    <td colspan="6">
+                                                        <input type="text" class="form-control ironInput" name="ironInputAlg" id="ironInputAlg" placeholder="Introduzca valores manualmente o con la calculadora" data-rule-required="true" data-msg-required="Se requiere este campo para la calculadora, por favor, llenelo">
                                                     </td>
                                                 </tr>
                                                 <tr>
@@ -158,10 +130,10 @@
                                                         <button type="button" class="btn btn-block ironCalculator" value="*"><i class="fa fa-times"></i></button>
                                                     </td>
                                                     <td>
-
+                                                        <button type="button" class="btn btn-block ironCalculator" value="("><strong>(</strong></button>
                                                     </td>
                                                     <td>
-
+                                                        <button type="button" class="btn btn-block ironCalculator" value=")"><strong>)</strong></button>
                                                     </td>
                                                 </tr>
                                                 <tr>
@@ -178,10 +150,10 @@
                                                         <button type="button" class="btn btn-block ironCalculator" value="-"><i class="fa fa-minus"></i></button>
                                                     </td>
                                                     <td>
-
+                                                        <button type="button" class="btn btn-block ironCalculator" value="power( ,2)"><strong>x²</strong></button>
                                                     </td>
                                                     <td>
-
+                                                        <button type="button" class="btn btn-block ironCalculator" value="sqrt()"><strong>&#8730;</strong></button>
                                                     </td>
                                                 </tr>
                                                 <tr>
@@ -198,10 +170,10 @@
                                                         <button type="button" class="btn btn-block ironCalculator" value="+"><i class="fa fa-plus"></i></button>
                                                     </td>
                                                     <td>
-
+                                                        <button type="button" class="btn btn-block ironCalculator" value="exp(0)"><strong>e</strong></button>
                                                     </td>
                                                     <td>
-
+                                                        <button type="submit" class="btn btn-block btn-success" id="ironAlgCalcSubmit">=</button>
                                                     </td>
                                                 </tr>
                                             </tbody>
@@ -211,11 +183,11 @@
                                 </div>
                                 <div class="col align-self-center form-group">
                                     <!-- Begin Lagrange -->
-                                    <form id="ironLagrangeCalculator" class="ironFormCalculator" method="POST">
-                                        <table class="table">
+                                    <form id="ironLagrangeCalculatorForm" name="ironLagrangeCalculatorForm" class="ironFormCalculator" action="/ironLagrangeCalculator" method="POST" role="form">
+                                        <table class="table" id="ironLagrangeTableReq">
                                             <thead class="thead-inverse">
                                                 <tr>
-                                                    <th colspan="6">
+                                                    <th colspan="2">
                                                         <span style="float:left;">
                                                             Método Lagrange
                                                         </span>
@@ -227,23 +199,37 @@
                                                     </th>
                                                 </tr>
                                             </thead>
-                                            <tbody>
+                                            <tbody id="ironTableLagrange">
                                                 <tr>
                                                     <td>
                                                         <p>En esta sección, se aplicará Lagrange para calcular la interpolación de una cantidad <strong>n</strong> de números.</p>
                                                     </td>
                                                 </tr>
-                                                <tr>
-                                                </tr>
                                             </tbody>
                                         </table>
+                                        <div id="ironLagrangeDiv">
+                                            <!-- Aquí ira el contenido que trae ironLagrangeCalculator del template iron_lagrange.html  -->
+                                        </div>
                                     </form>
+                                    <!-- Inner Form -->
+                                    <form class="ironFormAdder" id="ironAddRowsLagrange" name="ironAddRowsLagrange" action="/ironTablelgGen" method="POST" role="form">
+                                        <div class="col-md-12">
+                                            <h2>Añadir Filas</h2>
+                                            <hr>
+                                            <div class="form-group">
+                                               <label for="ironAddLgRow">Numero de Filas para evaluar:</label>
+                                               <input type="text" class="form-control ironInput" id="ironAddLgRow" name="ironAddLgRow" data-rule-required="true" data-msg-required="Se requiere un número de filas" data-rule-minlength="1" data-msg-minlenght="El valor de las filas no puede ser 0">
+                                            </div>
+                                            <button type="submit" class="btn btn-block btn-primary">Enviar</button>
+                                        </div>
+                                    </form>
+                                    <!-- End Inner Form-->
                                     <!-- End Lagrange -->
                                 </div>
                                 <div class="col align-self-center form-group">
                                     <!-- Begin Newton -->
-                                    <form id="ironNewtonCalculator" class="ironFormCalculator" method="POST">
-                                        <table class="table">
+                                    <form id="ironNewtonCalculatorForm" name="ironNewtonCalculatorForm" class="ironFormCalculator" action="/ironAlgebraCalculator" method="POST" role="form">
+                                        <table class="table table-hover">
                                             <thead class="thead-inverse">
                                                 <tr>
                                                     <th colspan="6">
@@ -268,22 +254,22 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col-md-12">
+                        <!-- Begin Footer -->
 
-                            </div>
-                        </div>
+                        <!-- End Footer -->
+                        {% include 'iron_modals.html' %}
                     </div>
 			  </div>
             </div>
 			<!-- /#page-content-wrapper -->
 		</div>
         <!-- Wrapper End -->
-
     <!-- End Of HTML -->
     </body>
     <script src="static/javascript/jquery.min.js"></script>
     <script src="static/javascript/popper.js"></script>
     <script src="static/javascript/bootstrap.min.js"></script>
+    <script src="static/javascript/jquery.validate.min.js"></script>
+    <script src="static/javascript/additional-methods.min.js"></script>
     <script src="static/javascript/main.js"></script>
 </html>
