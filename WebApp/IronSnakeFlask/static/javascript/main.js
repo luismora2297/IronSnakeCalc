@@ -1,3 +1,14 @@
+//Funcion para ver la cantidad de formularios que se muestran o no
+(function( $ )
+{
+   $.fn.iron_active_forms = function()
+   {
+      // Cantidad de elementos de formulario con Display
+      var ironForms = $(this).filter(function() { return $(this).css('display') !== 'none'; } ).length;
+      return ironForms;
+   };
+})( jQuery );
+
 var ironAllowedNumbers = '0123456789^+-*/%()Ee ';
 var ironSqrt = 'sqrt';
 var ironPi = 'pi';
@@ -7,20 +18,19 @@ var ironTan = 'tan';
 var iron = 'pow';
 
 //Ocultar Formularios
-//$('#ironNewtonCalculator').attr("hidden", true);
-//$('#ironLagrangeCalculator').attr("hidden", true);
-//$('#ironAlgebraCalculator').attr("hidden", true);
-
-// Cantidad de elementos de formulario con Display
-var ironForms = $('.ironFormCalculator').filter(function() { return $(this).css('display') !== 'none'; } ).length;
+$('#ironNewtonCalculatorForm').attr("hidden", true);
+//$('#ironLagrangeCalculatorForm').attr("hidden", true);
+//$('#ironAlgebraCalculatorForm').attr("hidden", true);
 
 //Ocultar Barra al comenzar
 $('#ironNavigation').attr("hidden", true);
 
+//Cuenta
+var ironformsquantity = $('.ironFormCalculator').iron_active_forms();
+
 //Mostrar Barra
 $(document).ready(function()
 {
-    //$('#ironOutputAlg').val('');
     $('#ironInputAlg').val('');
 
 	setTimeout(function()
@@ -30,7 +40,7 @@ $(document).ready(function()
 	},5000);
 
     //Verificar
-    console.log(ironForms);
+    console.log(ironformsquantity);
 
     //Calculadora de Algebra
     $("#ironAlgebraCalculatorForm").validate
@@ -166,4 +176,65 @@ $("#menu-toggle_2").click(function(e)
 {
   e.preventDefault();
   $("#wrapper").toggleClass("toggled");
+});
+
+/*
+$("#ironButtonReloadLg").click(function(e)
+{
+  //Recargar
+  $('#ironLagrangeDiv').html('');
+});
+
+$("#ironButtonReloadError").click(function(e)
+{
+  //Recargar
+  $('#ironLagrangeDiv').html('');
+}); */
+
+$("#ironClose01").click(function(e)
+{
+  e.preventDefault();
+  $("#ironAlgebraCalculatorForm").toggleClass("iron-hide");
+  ironformsquantity = $('.ironFormCalculator').iron_active_forms();
+  //Verificar
+  console.log(ironformsquantity);
+});
+
+$("#ironClose02").click(function(e)
+{
+  e.preventDefault();
+  $("#ironLagrangeCalculatorForm").toggleClass("iron-hide");
+  $("#ironAddRowsLagrange").toggleClass("iron-hide");
+  ironformsquantity = $('.ironFormCalculator').iron_active_forms();
+  //Verificar
+  console.log(ironformsquantity);
+});
+
+$("#ironClose03").click(function(e)
+{
+  e.preventDefault();
+  $("#ironNewtonCalculatorForm").toggleClass("iron-hide");
+  ironformsquantity = $('.ironFormCalculator').iron_active_forms();
+  //Verificar
+  console.log(ironformsquantity);
+});
+
+$("#ironClose04").click(function(e)
+{
+  e.preventDefault();
+  $("#ironLagrangeCalculatorForm").toggleClass("iron-hide");
+  $("#ironAddRowsLagrange").toggleClass("iron-hide");
+  ironformsquantity = $('.ironFormCalculator').iron_active_forms();
+  //Verificar
+  console.log(ironformsquantity);
+});
+
+$("#ironClose05").click(function(e)
+{
+  e.preventDefault();
+  $("#ironLagrangeCalculatorForm").toggleClass("iron-hide");
+  $("#ironAddRowsLagrange").toggleClass("iron-hide");
+  ironformsquantity = $('.ironFormCalculator').iron_active_forms();
+  //Verificar
+  console.log(ironformsquantity);
 });

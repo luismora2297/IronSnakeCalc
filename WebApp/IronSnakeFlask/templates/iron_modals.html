@@ -1,13 +1,13 @@
 <!-- Begin Modals -->
 <div class="modal fade" id="ironUsModal" role="dialog">
-    <div class="modal-dialog">
+    <div class="modal-dialog iron-modal-dialog">
         <!-- Modal content-->
         <div class="modal-content">
-            <div class="modal-header">
+            <div class="modal-header iron-modal-header">
                 <h4 class="modal-title">Nosotros Somos</h4>
-                <button type="button" class="close" data-dismiss="modal"><i class="fa fa-times"></i></button>
+                <a href="javascript:;" class="close" data-dismiss="modal"><i class="fa fa-circle ironClose"></i></a>
             </div>
-            <div class="modal-body">
+            <div class="modal-body iron_modal-body">
                 <p>Nosotros Somos:</p>
                 <ul>
                     <li>Luis Mora E-8-135595</li>
@@ -16,22 +16,37 @@
                 </ul>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-success" data-dismiss="modal">¡Gracias!</button>
+                <button type="button" class="btn btn-info" data-dismiss="modal">LMAO</button>
             </div>
         </div>
     </div>
 </div>
 <!-- Lagrange Modal -->
 <div class="modal fade" id="ironLagrangeModal" role="dialog">
-    <div class="modal-dialog">
+    <div class="modal-dialog iron-modal-dialog">
         <!-- Modal content-->
         <div class="modal-content">
-            <div class="modal-header">
-                <h4 class="modal-title">Nosotros Somos</h4>
-                <button type="button" class="close" data-dismiss="modal"><i class="fa fa-times"></i></button>
+            <div class="modal-header iron-modal-header">
+                <h4 class="modal-title">Método de Lagrange</h4>
+                <a href="javascript:;" class="close" data-dismiss="modal"><i class="fa fa-circle ironClose"></i></a>
             </div>
-            <div class="modal-body">
-                <p>Some text in the modal.</p>
+            <div class="modal-body iron_modal-body">
+                <p class="iron-justify-text">
+                    El polinomio de Lagrange, llamado así en honor a Joseph-Louis de Lagrange, es una forma de presentar el polinomio que interpola un conjunto de puntos dado. Lagrange publicó este resultado en 1795, pero lo descubrió Edward Waring en 1779 y fue redescubierto más tarde por Leonhard Euler en 1783.
+                    Dado que existe un único polinomio interpolador para un determinado conjunto de puntos, resulta algo engañoso llamar a este polinomio el polinomio interpolador de Lagrange. Un nombre más apropiado es interpolación polinómica en la forma de Lagrange.
+                </p>
+                <p class="iron-justify-text">
+                    <h2>Desventaja de su Uso</h2>
+                    <hr>
+                    Si se aumenta el número de puntos a interpolar (o nodos) con la intención de mejorar la aproximación a una función, también lo hace el grado del polinomio interpolador así obtenido, por norma general. De este modo, aumenta la dificultad en el cálculo, haciéndolo poco operativo manualmente a partir del grado 4, dado que no existen métodos directos de resolución de ecuaciones de grado 4, salvo que se puedan tratar como ecuaciones bicuadradas, situación extremadamente rara.
+                    Otra gran desventaja, respecto a otros métodos de interpolación, es la necesidad de recalcular todo el polinomio si se varía el número de nodos.
+                    <br>
+                    <h2>Ventaja de su Uso</h2>
+                    <hr>
+                    La principal ventaja del método deLagrange es la simplicidad de su implementación. También que es más fácil incluso de entender cuando se lleva a su expresión matematica.
+                </p>
+                <img src="static/css/img/ecuacion_lagrange.png" alt="ecuacion_lagrange">
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-info" data-dismiss="modal">¡Entendido!</button>
@@ -41,15 +56,33 @@
 </div>
 <!-- Newton Modal -->
 <div class="modal fade" id="ironNewtonModal" role="dialog">
-    <div class="modal-dialog">
+    <div class="modal-dialog iron-modal-dialog">
         <!-- Modal content-->
         <div class="modal-content">
-            <div class="modal-header">
-                <h4 class="modal-title">Nosotros Somos</h4>
-                <button type="button" class="close" data-dismiss="modal"><i class="fa fa-times"></i></button>
+            <div class="modal-header iron-modal-header">
+                <h4 class="modal-title">Método de Newton (hacia adelante)</h4>
+                <a href="javascript:;" class="close" data-dismiss="modal"><i class="fa fa-circle ironClose"></i></a>
             </div>
-            <div class="modal-body">
+            <div class="modal-body iron_modal-body">
                 <p>Some text in the modal.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-info" data-dismiss="modal">¡Entendido!</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Newton Modal -->
+<div class="modal fade" id="ironCalculatorModal" role="dialog">
+    <div class="modal-dialog iron-modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header iron-modal-header">
+                <h4 class="modal-title">Calculadora Cientifica</h4>
+                <a href="javascript:;" class="close" data-dismiss="modal"><i class="fa fa-circle ironClose"></i></a>
+            </div>
+            <div class="modal-body iron_modal-body">
+                <p>Se presenta una calculadora cientifica para realizar calculos simples de funciones y operaciones</p>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-info" data-dismiss="modal">¡Entendido!</button>

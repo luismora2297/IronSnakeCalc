@@ -13,9 +13,54 @@
   background-color: #292b2c;
 }
 
+.iron-modal-header
+{
+  color: #fff;
+  background-color: #292b2c;
+}
+
+.iron-hide
+{
+	display: none;
+}
+
+.iron-modal-dialog
+{
+    overflow-y: initial !important
+}
+.iron_modal-body
+{
+    height: 250px;
+    overflow-y: auto;
+}
+
+.iron_center
+{
+	text-align: center;
+	color: #FF4D1C;
+	font-size: 1.5rem;
+}
+
+#ironLgGraphic
+{
+	width:100%;
+	height:400px;
+}
+
 .bg-primary-iron
 {
   background-color: #FF4D1C !important;
+  color: #fff;
+}
+
+.iron-justify-text
+{
+	text-align:justify;
+}
+
+.ironTableShow th 
+{
+   text-align: center;   
 }
 
 .ironOutput
@@ -28,6 +73,18 @@
 	margin-top: 10px;
 	padding: 15px 0 15px 0;
 	text-align:right;
+}
+
+.ironOutputNum
+{
+	width:100%;
+	background-color:#FFD4CA;
+	border-width: 2px 0 0 0;
+	border-color: #1E1E1E;
+	font-size: 1.2em;
+	margin-top: 10px;
+	padding: 15px 0 15px 0;
+	text-align:center;
 }
 
 .ironInput
@@ -55,6 +112,31 @@
 	border-color: #757575;
 }
 
+.ironInputNum
+{
+	width:100%;
+	background-color:#FFD4CA;
+	border-width: 0 0 2px 0;
+	border-color: #1E1E1E;
+	font-size: 1.2em;
+	padding: 15px 0 15px 0;
+	text-align:center;
+}
+
+.ironInputNum:focus
+{
+	background-color:#FFD4CA;
+	border-width: 0 0 2px 0;
+	border-color: #757575;
+}
+
+.ironInputNum:checked
+{
+	background-color:#FFD4CA;
+	border-width: 0 0 2px 0;
+	border-color: #757575;
+}
+
 .ironIcon
 {
 	font-size: 1.5em;
@@ -66,7 +148,7 @@
 	margin-left: 3px;
 }
 
-#menu-toggle_2
+.btn-iron-2
 {
   color: #fff;
   background-color: #FF4D1C;
@@ -498,7 +580,7 @@
 
 #wrapper.toggled #page-content-wrapper {
     position: absolute;
-    margin-right: -250px;
+    margin-right: -300px;
 }
 
 
